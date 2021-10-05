@@ -9,7 +9,10 @@ from api import views
 
 # urlpatterns = [    path('v1', include(router.urls)),]
 
-from django.views.generic import TemplateView
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 
 urlpatterns = [
     # ... previously defined routes
@@ -17,8 +20,8 @@ urlpatterns = [
     path("home1", views.home1),
     path("home2", views.home2),
     path("home3", views.home3),
-
-
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
 ]
 
