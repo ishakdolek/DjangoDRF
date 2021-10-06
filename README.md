@@ -10,7 +10,9 @@ aktif edip venv'e kuruyoruz.
 
 Kurulumların yapılması
 
-`pip install Django django-rest-framework, pyyaml,django-rest-swagger,djangorestframework-simplejwt`
+```
+pip install Django django-rest-framework, pyyaml,django-rest-swagger,djangorestframework-simplejwt
+```
 
 `django-rest-swagger` normalde  swagger için bunu kullanmıştım. Fakat paket bakımı artık olmayacak onun yerine 
 https://drf-yasg.readthedocs.io/en/stable/readme.html bu paketi kullanacağım. Github sayfasında bakıldığı zaman
@@ -18,7 +20,8 @@ kurulumu gayet kolaydır.
 
 
 Simple Jwt Token ile işlem yapmak için settings dosyasına aşağıdaki satırları eklemek lazım
-`SWAGGER_SETTINGS = {
+```json 
+SWAGGER_SETTINGS = {
    'SECURITY_DEFINITIONS': {
       'Basic': {
             'type': 'basic'
@@ -29,10 +32,11 @@ Simple Jwt Token ile işlem yapmak için settings dosyasına aşağıdaki satır
             'in': 'header'
       }
    }
-}`
+}
+```
 
 
 
 # Kaynak 
-https://drf-yasg.readthedocs.io/en/stable/readme.html
-https://codesource.io/django-rest-api-documentation-with-swagger-ui/
+* https://drf-yasg.readthedocs.io/en/stable/readme.html
+* https://codesource.io/django-rest-api-documentation-with-swagger-ui/

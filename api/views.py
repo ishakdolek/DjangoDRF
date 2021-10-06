@@ -6,7 +6,7 @@ from rest_framework.response import Response
 
 
 @api_view(["GET"])
-#@permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 def home(request):
     data = {"username": "ishakdolek"}
     return Response(data, status=status.HTTP_200_OK)
