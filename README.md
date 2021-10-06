@@ -35,6 +35,17 @@ SWAGGER_SETTINGS = {
 }
 ```
 
+Kullanımı :
+
+ilk önce migration yapalım sonra bir kullanıcı oluşturalım. Bunun için aşağıdaki komutları çalıştırdığınız
+zaman ilk önce migrate yapacak sonra kullanıcı oluşturmanızı başlatacaktır.
+
+```
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+```
+
 
 
 # Kaynak 
