@@ -24,7 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
 
-
     path('docs/', TemplateView.as_view(
         template_name='documentation.html',
         extra_context={'schema_url': 'openapi-schema'}
